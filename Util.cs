@@ -7,15 +7,15 @@
 // using System.Threading.Tasks;
 // using System.Threading.Tasks;
 
-namespace CatWorx.BadgeMaker
-{
-    class Util
-    {
+// namespace CatWorx.BadgeMaker
+// {
+//     class Util
+//     {
         // Method declared as "static"
-        public static void PrintEmployees()
-        {
+        // public static void PrintEmployees()
+        // {
 
-        }
+        // }
         // Add list parameter to method
         // public static void PrintEmployees(List<Employee> employees)
         // {
@@ -117,6 +117,6 @@ namespace CatWorx.BadgeMaker
 
         
 
-    }
+//     }
 
-}
+// }
