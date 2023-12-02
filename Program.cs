@@ -3,7 +3,8 @@
 // enables dictionaries
 using System.Collections.Generic;
 using System;
-// using System.IO;
+// using System.Net;
+using System.IO;
 // enables lists
 // using System.Net;
 // using System.Threading.Tasks;
@@ -42,19 +43,14 @@ namespace CatWorx.BadgeMaker
 
         }
 
-        static void PrintEmployees(List<Employee> employees)
-        {
-            for (int i = 0; i < employees.Count; i++)
-            {
-                string template = "{0,-10}\t{1,-20}\t{2}";
-                Console.WriteLine(String.Format(template, employees[i].GetId(), employees[i].GetFullName(), employees[i].GetPhotoUrl()));
-            }
-        }
 
         static void Main(string[] args)
         {
             List<Employee> employees = GetEmployees();
-            PrintEmployees(employees);
+            
+            // PrintEmployees(employees);
+            Util.PrintEmployees(employees);
+            Util. MakeCSV(employees);
 
             for (int i = 0; i < employees.Count; i++) 
             {
