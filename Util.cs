@@ -18,11 +18,6 @@ using (StreamWriter file = new StreamWriter("data/employees.csv"))
         }
 }
 
-
-// using System.Net.Http;
-// using SkiaSharp;
-// using System.Threading.Tasks;
-
 namespace CatWorx.BadgeMaker
 {
 
@@ -46,6 +41,11 @@ namespace CatWorx.BadgeMaker
         }
 
 }
+
+
+// using System.Net.Http;
+// using SkiaSharp;
+// using System.Threading.Tasks;
 
 // Method declared as "static"
         // public static void PrintEmployees()
