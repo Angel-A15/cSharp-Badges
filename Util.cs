@@ -4,7 +4,7 @@ using System.IO;
 using System.Collections.Generic;
 
 // generates csv file
-// StreamWriter file = new StreamWriter("data/employees.csv");
+StreamWriter file = new StreamWriter("data/employees.csv");
 
 // inputs info into csv file
 using (StreamWriter file = new StreamWriter("data/employees.csv"))
@@ -14,7 +14,7 @@ using (StreamWriter file = new StreamWriter("data/employees.csv"))
         for (int i = 0; i < employees.Count; i++)
         {
                 string template = "{0},{1},{2}";
-                file.WriteLine(string.Format(template, employees[i].GetId(), employees[i].GetFullName(), employees[i].GetPhotoUrl()));
+                file.WriteLine(String.Format(template, employees[i].GetId(), employees[i].GetFullName(), employees[i].GetPhotoUrl()));
         }
 }
 
@@ -36,7 +36,10 @@ namespace CatWorx.BadgeMaker
 
                 public static void MakeCSV(List<Employee> employees)
                 {
-                        Directory.CreateDirectory("data");
+                        if (!Directory.Exists("data"))
+                        {
+                                Directory.CreateDirectory("data");
+                        }
                 }
         }
 

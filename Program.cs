@@ -50,7 +50,7 @@ namespace CatWorx.BadgeMaker
             
             // PrintEmployees(employees);
             Util.PrintEmployees(employees);
-            Util. MakeCSV(employees);
+            Util.MakeCSV(employees);
 
             for (int i = 0; i < employees.Count; i++) 
             {
