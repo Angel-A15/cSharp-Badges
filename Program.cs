@@ -46,16 +46,19 @@ namespace CatWorx.BadgeMaker
 
         static void Main(string[] args)
         {
-            List<Employee> employees = GetEmployees();
-            
-            // PrintEmployees(employees);
-            Util.PrintEmployees(employees);
+            // List<Employee> employees = GetEmployees();
+            List<Employee> employees = new List<Employee>();
+            employees = GetEmployees();
             Util.MakeCSV(employees);
+            Util.MakeBadges(employees);
 
-            for (int i = 0; i < employees.Count; i++) 
-            {
-                Console.WriteLine(employees[i].GetFullName());
-            }
+            // may need to psuedocode this part
+            // PrintEmployees(employees);
+            // Util.PrintEmployees(employees);
+            // for (int i = 0; i < employees.Count; i++) 
+            // {
+            //     Console.WriteLine(employees[i].GetFullName());
+            // }
         }
     }
     

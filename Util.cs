@@ -2,6 +2,7 @@
 using System;
 using System.IO;
 using System.Collections.Generic;
+using SkiaSharp;
 
 // generates csv file
 // StreamWriter file = new StreamWriter("data/employees.csv");
@@ -12,6 +13,14 @@ namespace CatWorx.BadgeMaker
 
         class Util 
         {
+                public static void MakeBadges(List<Employee> employees) {
+
+                        SKImage newImage = SKImage.FromEncodedData(File.OpenRead("badge.png"));
+
+                        SKData data = newImage.Encode();
+                        data.SaveTo(File.OpenWrite("data/employeeBadge.png"));
+
+                }
 
                 public static void PrintEmployees(List<Employee> employees)
                 {
@@ -45,6 +54,7 @@ namespace CatWorx.BadgeMaker
                                 }
 
                         }
+                
 
 
 // using System.Net.Http;
