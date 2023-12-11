@@ -6,9 +6,6 @@ using SkiaSharp;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-// generates csv file
-// StreamWriter file = new StreamWriter("data/employees.csv");
-
 
 namespace CatWorx.BadgeMaker
 {
@@ -105,7 +102,7 @@ namespace CatWorx.BadgeMaker
                                         SKData data = finalImage.Encode();
 
                                         string template = "data/{0}_badge.png";
-                                        
+
                                         data.SaveTo(File.OpenWrite(string.Format(template, employees[i].GetId())));
                                                                         
                                 }
